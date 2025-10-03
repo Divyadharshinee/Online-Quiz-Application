@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Login Section -->
+        <div id="login" class="flex-center flex-column">
+            <h1>Quiz App - Login</h1>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>
+                Don't have an account?
+                <button type="button" class="btn" onclick="showRegister()">Register</button>
+            </p>
+        </div>
+
+        <!-- Register Section -->
+        <div id="register" class="hide flex-center flex-column">
+            <h1>Quiz App - Register</h1>
+            <form id="registerForm">
+                <input type="text" id="regName" placeholder="Full Name" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>
+                Already have an account?
+                <button type="button" class="btn" onclick="showLogin()">Login</button>
+            </p>
+        </div>
+
+
+        <!-- Home Section -->
+        <div id="home" class="hide flex-center flex-column">
+            <h2 id="welcomeMsg">Welcome!</h2>
+            <h3>Select Your User Type</h3>
+            <button class="btn" onclick="selectUserType('School')">School Student</button>
+            <button class="btn" onclick="selectUserType('College')">College Student</button>
+            <button class="btn" onclick="selectUserType('Professional')">Professional</button>
+            <button class="btn" onclick="showSection('highScores')">View Leaderboard</button>
+            <button class="btn" onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Categories Section -->
+        <div id="categories" class="hide flex-center flex-column">
+            <h2>Select Category</h2>
+            <div id="categoryList"></div>
+            <button class="btn" onclick="goHome()">Back to Home</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="hide">
+            <div id="quiz-bar-container">
+                <h2 id="quiz-category-title">Category</h2>
+                <!-- Timer Display -->
+                <div id="timer-display">⏱ Time: 30s</div>
+
+                <!-- Question Progress -->
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span id="questionCounter">Question 1 of 10</span>
+                        <span id="progressPercentage">0%</span>
+                    </div>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="quiz-container"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="result-section" class="hide flex-center flex-column">
+            <div id="result-container"></div>
+            <div class="final-buttons">
+                <button class="btn" onclick="retryQuiz()">Retry Quiz</button>
+                <button class="btn" onclick="goHome()">Go Home</button>
+            </div>
+        </div>
+
+        <!-- Leaderboard Section -->
+        <div id="highScores" class="hide flex-center flex-column">
+            <h1>🏆 Leaderboard</h1>
+            <ul id="highScoresList"></ul>
+            <div class="final-buttons">
+                <button class="btn" onclick="clearLeaderboard()">Clear Leaderboard</button>
+                <button class="btn" onclick="goHome()">Go Home</button>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="hide flex-center flex-column">
+            <div class="loader"></div>
+            <p>Loading Questions...</p>
+        </div>
+    </div>
+
+   <script src="./script.js"></script>
+
+    </body>
+</html>
+     
