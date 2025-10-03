@@ -1,6 +1,5 @@
-/* CSS Variables */
+ /* CSS Variables */
         :root {
-/* Add Google Fonts in HTML <head> (Poppins) for best effect */
             --hue-neutral: 200;
             --hue-wrong: 0;
             --hue-correct: 145;
@@ -20,17 +19,18 @@
             background: linear-gradient(135deg, #56a5eb 0%, #ecf5ff 100%);
         }
 
+        
         .container {
-            margin-top: 32px;
-            margin-bottom: 32px;
+            margin-top: 16px;
+            margin-bottom: 16px;
             width: 800px;
             max-width: 95%;
+            max-height: 90vh;
             background: linear-gradient(120deg, #fff 80%, #e3f0ff 100%);
             border-radius: 18px;
-            padding: 40px 32px;
+            padding: 20px 32px;
             box-shadow: 0 8px 32px 0 rgba(86, 165, 235, 0.18);
             overflow-y: auto;
-            max-height: 90vh;
         }
 
         .flex-center {
@@ -89,9 +89,9 @@
 
         .start-btn,
         .next-btn {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            padding: 16px 32px;
+            padding: 12px 24px;
             border-radius: 14px;
         }
 
@@ -196,27 +196,22 @@
 
         /* Forms */
         form {
-            margin-top: 24px;
-            margin-bottom: 24px;
-            gap: 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 18px;
+            gap: 16px;
             max-width: 340px;
-            margin: 0 auto 16px auto;
+            margin: 16px auto;
         }
 
         input {
-            padding: 1rem 1.2rem;
-            font-size: 1.1rem;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 8px;
             width: 100%;
             box-sizing: border-box;
-            margin-bottom: 16px;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 28px;
+            margin-bottom: 0;
             text-align: center;
         }
 
@@ -321,7 +316,6 @@
             display: flex;
             justify-content: space-between;
             margin-top: 3rem;
-            gap: 18px;
             gap: 10px;
         }
 
